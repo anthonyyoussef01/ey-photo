@@ -25,20 +25,20 @@ export function PhotoAlbum({ albumId, title, photos, className, preview = false 
 
   return (
     <>
-      <motion.div 
+      <motion.div
         layout
         className={cn("cursor-pointer overflow-hidden", className)}
         onClick={() => preview ? setIsExpanded(!isExpanded) : null}
       >
         <motion.div className="flex items-center justify-between mb-4">
-          <motion.h3 
+          <motion.h3
             layout="position"
             className="text-2xl font-light"
           >
             {title}
           </motion.h3>
           {preview && (
-            <Link 
+            <Link
               to={`/album/${albumId}`}
               className="text-sm text-neutral-600 hover:text-black transition-colors"
               onClick={(e) => e.stopPropagation()}
@@ -48,7 +48,7 @@ export function PhotoAlbum({ albumId, title, photos, className, preview = false 
           )}
         </motion.div>
 
-        <motion.div 
+        <motion.div
           layout
           className="grid grid-cols-2 md:grid-cols-3 gap-1"
         >
@@ -82,7 +82,7 @@ export function PhotoAlbum({ albumId, title, photos, className, preview = false 
           <img
             src={selectedPhoto!}
             alt="Selected photo"
-            className="w-full h-auto"
+            className="w-full h-auto max-h-[90vh] object-contain"
           />
         </DialogContent>
       </Dialog>
