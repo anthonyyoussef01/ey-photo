@@ -1,16 +1,10 @@
 import { PhotoAlbum } from "@/components/PhotoAlbum";
 import { CalendlyButton } from "@/components/CalendlyButton";
 import { albums } from "@/lib/data";
-import { Helmet } from 'react-helmet-async';
 
 export function HomePage() {
   return (
     <>
-      <Helmet>
-        <title>EY Photo & Video</title>
-        <meta name="description" content="EY Photo & Video is a wedding photography and videography service based in Rockland County, NY." />
-        <meta name="keywords" content="photos, videos, engagement, coptic, orthodox, arab, egyptian, drone, documentary, cinematic, Hudson Valley, New York, New Jersey, New City" />
-      </Helmet>
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-6">
         <div className="max-w-screen-xl mx-auto">
