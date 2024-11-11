@@ -26,7 +26,7 @@ export function Navigation() {
           </ul>
         </div>
         
-        <Link to="/" className="flex-1 text-center text-2xl font-light">J.</Link>
+        <Link to="/" className="flex-1 text-center text-2xl font-light">EY</Link>
         
         <div className="flex-1 flex justify-end">
           <ul className="flex gap-8">
