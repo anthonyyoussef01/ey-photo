@@ -66,11 +66,13 @@ export function PhotoAlbum({ albumId, title, photos, className, preview = false 
               }}
             >
               <AspectRatio ratio={1}>
-                <img
-                  src={photo.url}
-                  alt={`${title} ${index + 1}`}
-                  className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
-                />
+                <div className="relative w-full h-full overflow-hidden">
+                  <img
+                    src={photo.url}
+                    alt={`${title} ${index + 1}`}
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
               </AspectRatio>
             </motion.div>
           ))}
