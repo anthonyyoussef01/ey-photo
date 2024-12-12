@@ -14,7 +14,7 @@ export function ServicesPage() {
           Services & Pricing
         </motion.h1>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
+        <div className="grid md:grid-cols-3 gap-8 mb-16 bg-neutral-50">
           {services.map((service, index) => (
             <motion.div
               key={service.title}
