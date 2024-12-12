@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link as RouterLink, useNavigate, useLocation } from 'react-router-dom';
-import { Link as ScrollLink, scroller } from 'react-scroll';
+import { scroller } from 'react-scroll';
 
 const navItems = [
   { label: "ABOUT", path: "about" },
@@ -14,6 +14,11 @@ export function Navigation() {
   const [scrollTo, setScrollTo] = useState<string | null>(null);
   const navigate = useNavigate();
   const location = useLocation();
+
+  // Add scrollToTop function
+  const scrollToTop = () => {
+    handleScrollLinkClick('hero');
+  };
 
   useEffect(() => {
     if (scrollTo && location.pathname === '/') {
@@ -59,7 +64,18 @@ export function Navigation() {
           </ul>
         </div>
 
-        <RouterLink to="/" className="flex-1 text-center text-2xl font-light">EY</RouterLink>
+        <RouterLink 
+          to="/" 
+          className="flex-1 text-center text-2xl font-light"
+          onClick={(e) => {
+            if (location.pathname === '/') {
+              e.preventDefault();
+              scrollToTop();
+            }
+          }}
+        >
+          EY
+        </RouterLink>
 
         <div className="flex-1 flex justify-end">
           <ul className="hidden md:flex gap-8">
