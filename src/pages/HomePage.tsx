@@ -7,7 +7,7 @@ export function HomePage() {
     <>
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-6">
-        <div className="max-w-screen-xl mx-auto">
+        <div className="max-w-screen-xl mx-auto" id="about">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-5xl font-light leading-tight mb-6">
