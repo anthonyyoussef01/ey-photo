@@ -1,5 +1,6 @@
 import { PhotoAlbum } from "@/components/PhotoAlbum";
 import { CalendlyButton } from "@/components/CalendlyButton";
+import { AboutSection } from "@/components/AboutSection";
 import { albums } from "@/lib/data";
 
 export function HomePage() {
@@ -7,7 +8,7 @@ export function HomePage() {
     <>
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-6">
-        <div className="max-w-screen-xl mx-auto" id="about">
+        <div id='hero' className="max-w-screen-xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-5xl font-light leading-tight mb-6">
@@ -46,8 +47,10 @@ export function HomePage() {
         </div>
       </section>
 
+      <AboutSection />
+
       {/* Contact Section */}
-      <section id="contact" className="py-20 px-6 bg-neutral-50">
+      <section id="contact" className="py-20 px-6">
         <div className="max-w-screen-xl mx-auto text-center">
           <h2 className="text-3xl font-light mb-6">Let's Create Something Beautiful</h2>
           <p className="text-neutral-600 mb-8">
