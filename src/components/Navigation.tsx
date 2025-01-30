@@ -1,6 +1,13 @@
 import { useState, useEffect } from 'react';
 import { Link as RouterLink, useNavigate, useLocation } from 'react-router-dom';
 import { scroller } from 'react-scroll';
+import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
+
+// Add interface definition at the top
+interface NavigationProps {
+  className?: string;
+}
 
 const navItems = [
   { label: "ABOUT", path: "about" },
@@ -9,7 +16,7 @@ const navItems = [
   { label: "CONTACT", path: "contact" }
 ];
 
-export function Navigation() {
+export function Navigation({ className }: NavigationProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [scrollTo, setScrollTo] = useState<string | null>(null);
   const navigate = useNavigate();
@@ -47,7 +54,7 @@ export function Navigation() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-sm">
+    <nav className={cn("fixed top-0 w-full z-50 bg-white/80 backdrop-blur-sm border-b", className)}>
       <div className="max-w-screen-2xl mx-auto px-6 py-6 flex items-center justify-between">
         <div className="flex-1">
           <ul className="hidden md:flex gap-8">

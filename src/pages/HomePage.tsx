@@ -2,6 +2,7 @@ import { PhotoAlbum } from "@/components/PhotoAlbum";
 import { CalendlyButton } from "@/components/CalendlyButton";
 import { AboutSection } from "@/components/AboutSection";
 import { albums } from "@/lib/data";
+import { HomeVideoPlayer } from "@/components/HomeVideoPlayer";
 
 export function HomePage() {
   return (
@@ -20,11 +21,7 @@ export function HomePage() {
               <CalendlyButton />
             </div>
             <div>
-              <img 
-                src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?q=80&w=1200"
-                alt="Wedding moment"
-                className="w-full rounded-lg object-cover aspect-[3/4]"
-              />
+              <HomeVideoPlayer />
             </div>
           </div>
         </div>
