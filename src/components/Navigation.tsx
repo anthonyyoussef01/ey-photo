@@ -3,7 +3,6 @@ import { Link as RouterLink, useNavigate, useLocation } from 'react-router-dom';
 import { scroller } from 'react-scroll';
 import { cn } from "@/lib/utils";
 
-// Add interface definition at the top
 interface NavigationProps {
   className?: string;
 }
@@ -21,7 +20,6 @@ export function Navigation({ className }: NavigationProps) {
   const navigate = useNavigate();
   const location = useLocation();
 
-  // Add scrollToTop function
   const scrollToTop = () => {
     handleScrollLinkClick('hero');
   };

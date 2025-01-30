@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
@@ -23,6 +23,11 @@ export function PhotoAlbum({ albumId, title, photos, className, preview = false 
   const [isExpanded, setIsExpanded] = useState(false);
   const [selectedPhoto, setSelectedPhoto] = useState<string | null>(null);
 
+  const handleViewAllClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    window.scrollTo(0, 0);
+  };
+
   return (
     <>
       <motion.div
@@ -41,7 +46,7 @@ export function PhotoAlbum({ albumId, title, photos, className, preview = false 
             <Link
               to={`/album/${albumId}`}
               className="text-sm text-neutral-600 hover:text-black transition-colors"
-              onClick={(e) => e.stopPropagation()}
+              onClick={handleViewAllClick}
             >
               View All
             </Link>
