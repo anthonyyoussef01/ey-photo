@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { Link as RouterLink, useNavigate, useLocation } from 'react-router-dom';
 import { scroller } from 'react-scroll';
 import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
 
 // Add interface definition at the top
 interface NavigationProps {
