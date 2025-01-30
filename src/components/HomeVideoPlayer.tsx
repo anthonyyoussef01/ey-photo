@@ -44,7 +44,7 @@ export function HomeVideoPlayer() {
     >
       <video
         ref={videoRef}
-        src="/src/albums/proposals/mariaXmario.mp4"
+        src="https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObt5bHgU0FLUZAnFo5623slQ1WbRfYka4exqrgt"
         preload="metadata"
         autoPlay
         loop
