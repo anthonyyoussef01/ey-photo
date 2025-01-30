@@ -2,11 +2,13 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { OptimizedImage } from "@/components/ui/optimized-image";
 
 interface Photo {
   url: string;
   width?: number;
   height?: number;
+  placeholderSrc?: string;
 }
 
 interface PhotoGridProps {
@@ -33,10 +35,11 @@ export function PhotoGrid({ photos }: PhotoGridProps) {
             onClick={() => setSelectedPhoto(photo.url)}
           >
             <AspectRatio ratio={1}>
-              <img
+              <OptimizedImage
                 src={photo.url}
                 alt={`Photo ${index + 1}`}
                 className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
+                placeholderSrc={photo.placeholderSrc}
               />
             </AspectRatio>
           </motion.div>
