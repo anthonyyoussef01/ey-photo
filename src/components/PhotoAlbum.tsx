@@ -4,6 +4,7 @@ import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { cn } from "@/lib/utils";
 import { Link } from 'react-router-dom';
+import { Skeleton } from "@/components/ui/skeleton";
 
 interface Photo {
   url: string;
@@ -20,28 +21,24 @@ interface PhotoAlbumProps {
 }
 
 export function PhotoAlbum({ albumId, title, photos, className, preview = false }: PhotoAlbumProps) {
-  const [isExpanded, setIsExpanded] = useState(false);
   const [selectedPhoto, setSelectedPhoto] = useState<string | null>(null);
+  const [loadedImages, setLoadedImages] = useState<Set<string>>(new Set());
 
-  const handleViewAllClick = (e: React.MouseEvent) => {
-    e.stopPropagation();
+  const handleImageLoad = (url: string) => {
+    setLoadedImages(prev => new Set(prev).add(url));
+  };
+
+  const handleViewAllClick = () => {
     window.scrollTo(0, 0);
   };
 
   return (
     <>
-      <motion.div
-        layout
-        className={cn("cursor-pointer overflow-hidden", className)}
-        onClick={() => preview ? setIsExpanded(!isExpanded) : null}
-      >
-        <motion.div className="flex items-center justify-between mb-4">
-          <motion.h3
-            layout="position"
-            className="text-2xl font-light"
-          >
+      <div className={cn("overflow-hidden", className)}>
+        <div className="flex items-center justify-between mb-4">
+          <h3 className="text-2xl font-light">
             {title}
-          </motion.h3>
+          </h3>
           {preview && (
             <Link
               to={`/album/${albumId}`}
@@ -51,38 +48,40 @@ export function PhotoAlbum({ albumId, title, photos, className, preview = false 
               View All
             </Link>
           )}
-        </motion.div>
+        </div>
 
         <motion.div
-          layout
           className="grid grid-cols-2 md:grid-cols-3 gap-1"
         >
-          {photos.slice(0, preview && !isExpanded ? 3 : undefined).map((photo, index) => (
+          {photos.slice(0, 3).map((photo, index) => (
             <motion.div
               key={photo.url}
-              layout
-              initial={!isExpanded ? { opacity: 0 } : false}
+              initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.3, delay: index * 0.1 }}
-              className="relative group"
-              onClick={(e) => {
-                e.stopPropagation();
-                setSelectedPhoto(photo.url);
-              }}
+              className="relative group cursor-pointer"
+              onClick={() => setSelectedPhoto(photo.url)}
             >
               <AspectRatio ratio={1}>
                 <div className="relative w-full h-full overflow-hidden">
+                  {!loadedImages.has(photo.url) && (
+                    <Skeleton className="absolute inset-0 w-full h-full" />
+                  )}
                   <img
                     src={photo.url}
                     alt={`${title} ${index + 1}`}
-                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    className={cn(
+                      "absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105",
+                      !loadedImages.has(photo.url) && "opacity-0"
+                    )}
+                    onLoad={() => handleImageLoad(photo.url)}
                   />
                 </div>
               </AspectRatio>
             </motion.div>
           ))}
         </motion.div>
-      </motion.div>
+      </div>
 
       <Dialog open={!!selectedPhoto} onOpenChange={() => setSelectedPhoto(null)}>
         <DialogContent className="max-w-screen-lg">
