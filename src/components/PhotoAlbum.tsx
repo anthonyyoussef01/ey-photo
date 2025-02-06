@@ -28,24 +28,17 @@ export function PhotoAlbum({ albumId, title, photos, className, preview = false 
     setLoadedImages(prev => new Set(prev).add(url));
   };
 
-  const handleViewAllClick = () => {
-    window.scrollTo(0, 0);
-  };
-
   return (
     <>
       <div className={cn("overflow-hidden", className)}>
-        <div className="flex items-center justify-between mb-4">
-          <h3 className="text-2xl font-light">
-            {title}
-          </h3>
+        <div className="flex items-center justify-between mb-6">
+          <h2 className="text-2xl font-light">{title}</h2>
           {preview && (
-            <Link
+            <Link 
               to={`/album/${albumId}`}
-              className="text-sm text-neutral-600 hover:text-black transition-colors"
-              onClick={handleViewAllClick}
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
-              View All
+              View all →
             </Link>
           )}
         </div>

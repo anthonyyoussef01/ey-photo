@@ -8,9 +8,11 @@ import { Link } from 'react-router-dom';
 
 export function AlbumPage() {
   const { albumId } = useParams();
-  const album = albums.find(a => a.id === albumId);
+  const album = albums.find(a => a?.id === albumId);
 
-  if (!album) return null;
+  if (!album) {
+    return <div>Album not found</div>;
+  }
 
   return (
     <div className="pt-32 px-6 min-h-screen">
@@ -37,7 +39,7 @@ export function AlbumPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-neutral-600 mt-4"
+            className="text-muted-foreground mt-4"
           >
             {album.description}
           </motion.p>

@@ -2,7 +2,7 @@ import { CameraIcon, HeartIcon, UsersIcon } from "lucide-react";
 
 export function AboutSection() {
   return (
-    <section className="bg-neutral-50">
+    <section className="bg-neutral-100 dark:bg-zinc-900">
       <div id="about" className="container px-7 py-20 lg:py-28">
         <div className="max-w-2xl mx-auto">
           <div className="grid gap-12">

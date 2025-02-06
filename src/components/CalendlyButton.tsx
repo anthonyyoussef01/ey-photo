@@ -8,7 +8,7 @@ export function CalendlyButton() {
         <Button 
           variant="outline" 
           size="lg"
-          className="text-neutral-800 border-neutral-800 hover:bg-neutral-800 hover:text-white transition-colors"
+          className="text-foreground border-foreground hover:bg-accent hover:text-accent-foreground transition-colors"
         >
           Check Availability
         </Button>

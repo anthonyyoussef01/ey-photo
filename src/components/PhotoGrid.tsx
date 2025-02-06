@@ -39,7 +39,7 @@ export function PhotoGrid({ photos }: PhotoGridProps) {
       <motion.div 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-12 mt-12"
+        className="grid grid-cols-2 md:grid-cols-3 gap-4 pt-12 pb-12"
       >
         {photos.map((photo, index) => (
           <motion.div
