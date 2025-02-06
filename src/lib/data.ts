@@ -301,47 +301,7 @@ export const albums = [
         placeholderSrc: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObtnNZ1y9Ov2M4fJ7NFirqWk9bPlTnsZEpH1eOQ" // Small version of the same image
       },
     ]
-  },
-];
-
-export const services = [
-  {
-    title: "Wedding Photography",
-    startingPrice: 2500,
-    features: [
-      "8 hours of coverage",
-      "Second photographer",
-      "Online gallery",
-      "High-resolution digital files",
-      "Engagement session",
-      "Wedding day timeline planning"
-    ]
-  },
-  {
-    title: "Event Photography",
-    startingPrice: 1500,
-    features: [
-      "4 hours of coverage",
-      "Professional editing",
-      "Online gallery",
-      "High-resolution digital files",
-      "Quick turnaround",
-      "Commercial usage rights"
-    ]
-  },
-  {
-    title: "Aerial Photography",
-    startingPrice: 800,
-    features: [
-      "2 hours of drone coverage",
-      "4K video footage",
-      "High-resolution photos",
-      "FAA licensed pilot",
-      "Location scouting",
-      "Raw footage included"
-    ]
-  },
-  
+  },,
   {
     id: "weddings",
     title: "WEDDINGS",
@@ -385,4 +345,43 @@ export const services = [
       },
     ]
   },
+];
+
+export const services = [
+  {
+    title: "Wedding Photography",
+    startingPrice: 2500,
+    features: [
+      "8 hours of coverage",
+      "Second photographer",
+      "Online gallery",
+      "High-resolution digital files",
+      "Engagement session",
+      "Wedding day timeline planning"
+    ]
+  },
+  {
+    title: "Event Photography",
+    startingPrice: 1500,
+    features: [
+      "4 hours of coverage",
+      "Professional editing",
+      "Online gallery",
+      "High-resolution digital files",
+      "Quick turnaround",
+      "Commercial usage rights"
+    ]
+  },
+  {
+    title: "Aerial Photography",
+    startingPrice: 800,
+    features: [
+      "2 hours of drone coverage",
+      "4K video footage",
+      "High-resolution photos",
+      "FAA licensed pilot",
+      "Location scouting",
+      "Raw footage included"
+    ]
+  }
 ];
