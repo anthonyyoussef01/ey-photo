@@ -56,6 +56,14 @@ export const albums = [
         placeholderSrc: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObtiZhQwGJwIOGXME23B8ZD0yrVUfFYKLHmNs6b"
       },
       { 
+        url: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObtk3P9ocdWb5xtNJBmZvef0dM9laQDqUuoh37H",
+        placeholderSrc: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObtk3P9ocdWb5xtNJBmZvef0dM9laQDqUuoh37H"
+      },
+      { 
+        url: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObt1Ij0d1jQC81R39YBeupvMSjAhOyLbl6fosZG",
+        placeholderSrc: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObt1Ij0d1jQC81R39YBeupvMSjAhOyLbl6fosZG"
+      },
+      { 
         url: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObtNm7l7pgx4Wd91icMRehJaKugQpSUtAymIHGf",
         placeholderSrc: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObtNm7l7pgx4Wd91icMRehJaKugQpSUtAymIHGf"
       },
@@ -68,16 +76,8 @@ export const albums = [
         placeholderSrc: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObtmdUi1qhdlQ0AhjSDy7xoWbGJavsFw29Ou4TE"
       },
       { 
-        url: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObtk3P9ocdWb5xtNJBmZvef0dM9laQDqUuoh37H",
-        placeholderSrc: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObtk3P9ocdWb5xtNJBmZvef0dM9laQDqUuoh37H"
-      },
-      { 
         url: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObtHqTIkk0rQEXVUmc8h7jCqnks1FHYwePRoliz",
         placeholderSrc: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObtHqTIkk0rQEXVUmc8h7jCqnks1FHYwePRoliz"
-      },
-      { 
-        url: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObt1Ij0d1jQC81R39YBeupvMSjAhOyLbl6fosZG",
-        placeholderSrc: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObt1Ij0d1jQC81R39YBeupvMSjAhOyLbl6fosZG"
       },
       { 
         url: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObtFbZoE2lCtAguTsGL8fpmNYUJjowqi76H2zWZ",
@@ -107,6 +107,73 @@ export const albums = [
         url: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObtrYOk0v32pLhcDK9Ago0PrZO1QlRwtMUfdSBX",
         placeholderSrc: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObtrYOk0v32pLhcDK9Ago0PrZO1QlRwtMUfdSBX"
       }
+    ]
+  },
+  {
+    id: "portraits",
+    title: "PORTRAITS",
+    description: "Beautiful and timeless portraits for individuals, couples, and families.",
+    photos: [
+      { 
+        url: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObt12NHzVQC81R39YBeupvMSjAhOyLbl6fosZGP",
+        placeholderSrc: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObt12NHzVQC81R39YBeupvMSjAhOyLbl6fosZGP" // Small version of the same image
+      },
+      { 
+        url: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObtsETSAGBD1P5g8eCwkJ0rx6LNVn7Wmu9hyUa2",
+        placeholderSrc: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObtsETSAGBD1P5g8eCwkJ0rx6LNVn7Wmu9hyUa2" // Small version of the same image
+      },
+      { 
+        url: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObtm8MPoShdlQ0AhjSDy7xoWbGJavsFw29Ou4TE",
+        placeholderSrc: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObtm8MPoShdlQ0AhjSDy7xoWbGJavsFw29Ou4TE" // Small version of the same image
+      },
+      { 
+        url: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObt8GzaLOoJ72F3x8vQARUNGMo46iOYez9plwbV",
+        placeholderSrc: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObt8GzaLOoJ72F3x8vQARUNGMo46iOYez9plwbV" // Small version of the same image
+      },
+      { 
+        url: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObtrFNgCL32pLhcDK9Ago0PrZO1QlRwtMUfdSBX",
+        placeholderSrc: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObtrFNgCL32pLhcDK9Ago0PrZO1QlRwtMUfdSBX" // Small version of the same image
+      },
+      { 
+        url: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObtJy481GrNeDoGuFYmw38p6CfJibscUO5vBMgx",
+        placeholderSrc: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObtJy481GrNeDoGuFYmw38p6CfJibscUO5vBMgx" // Small version of the same image
+      },
+      { 
+        url: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObtfAsJuKmkMuELpAk3YIcXC4myegKUOjbxqFon",
+        placeholderSrc: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObtfAsJuKmkMuELpAk3YIcXC4myegKUOjbxqFon" // Small version of the same image
+      },
+      { 
+        url: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObtZV3aTdbtVI0ksQ1jHZS5rFehTdlqnCuRPB7O",
+        placeholderSrc: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObtZV3aTdbtVI0ksQ1jHZS5rFehTdlqnCuRPB7O" // Small version of the same image
+      },
+      { 
+        url: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObtJAMqMFNeDoGuFYmw38p6CfJibscUO5vBMgxh",
+        placeholderSrc: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObtJAMqMFNeDoGuFYmw38p6CfJibscUO5vBMgxh" // Small version of the same image
+      },
+      { 
+        url: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObtft9ZWAkMuELpAk3YIcXC4myegKUOjbxqFont",
+        placeholderSrc: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObtft9ZWAkMuELpAk3YIcXC4myegKUOjbxqFont" // Small version of the same image
+      },
+      { 
+        url: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObtJ9pfqSNeDoGuFYmw38p6CfJibscUO5vBMgxh",
+        placeholderSrc: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObtJ9pfqSNeDoGuFYmw38p6CfJibscUO5vBMgxh" // Small version of the same image
+      },
+      { 
+        url: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObta1t05yVqnFQWoPp9r2HjYwvhEtTemOJgAV5B",
+        placeholderSrc: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObta1t05yVqnFQWoPp9r2HjYwvhEtTemOJgAV5B" // Small version of the same image
+      },
+      { 
+        url: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObtLIwV2dTbY25qZVQTtmn6pDPcCdx793orNzEl",
+        placeholderSrc: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObtLIwV2dTbY25qZVQTtmn6pDPcCdx793orNzEl" // Small version of the same image
+      },
+      { 
+        url: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObtsvg9TTBD1P5g8eCwkJ0rx6LNVn7Wmu9hyUa2",
+        placeholderSrc: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObtsvg9TTBD1P5g8eCwkJ0rx6LNVn7Wmu9hyUa2" // Small version of the same image
+      },
+      { 
+        url: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObtyrCQiQLryqupfEZLBMiOVAQcs36YT2dWtGwa",
+        placeholderSrc: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObtyrCQiQLryqupfEZLBMiOVAQcs36YT2dWtGwa" // Small version of the same image
+      },
     ]
   },
   {

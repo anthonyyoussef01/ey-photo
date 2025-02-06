@@ -15,35 +15,33 @@ export function AlbumPage() {
   return (
     <div className="pt-32 px-6 min-h-screen">
       <div className="max-w-screen-xl mx-auto">
-        <div className="mb-12">
-          <Button
-            variant="ghost"
-            asChild
-            className="mb-6"
-          >
-            <Link to="/">
-              <ArrowLeft className="mr-2 h-4 w-4" />
-              Back
-            </Link>
-          </Button>
-          <motion.h1 
+        <Button
+          variant="ghost"
+          asChild
+          className="mb-6"
+        >
+          <Link to="/">
+            <ArrowLeft className="mr-2 h-4 w-4" />
+            Back
+          </Link>
+        </Button>
+        <motion.h1 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-4xl font-light"
+        >
+          {album.title}
+        </motion.h1>
+        {album.description && (
+          <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-4xl font-light"
+            transition={{ delay: 0.1 }}
+            className="text-neutral-600 mt-4"
           >
-            {album.title}
-          </motion.h1>
-          {album.description && (
-            <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 }}
-              className="text-neutral-600 mt-4"
-            >
-              {album.description}
-            </motion.p>
-          )}
-        </div>
+            {album.description}
+          </motion.p>
+        )}
 
         <PhotoGrid photos={album.photos} />
       </div>
