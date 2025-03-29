@@ -7,10 +7,10 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-All /src/albums/ except /src/albums/proposals/mariaXmario.mp4 and files with .webp extension
-/src/albums/*
-!/src/albums/proposals/mariaXmario.mp4
+# All /src/albums/ except /src/albums/proposals/mariaXmario.mp4 and files with .webp extension
 !/src/albums/*.webp
+!/src/albums/proposals/mariaXmario.mp4
+/src/albums/*
 
 node_modules
 dist
