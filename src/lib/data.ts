@@ -1,8 +1,8 @@
 // src/lib/data.ts
 // --- Vite Asset Handling ---
-// Use import.meta.glob to find all .webp files within src/albums
+// Use import.meta.glob to find all .webp and .jpg files within src/albums
 // eager: true loads them immediately. import: 'default' gets the URL string.
-const webpThumbnails: Record<string, string> = import.meta.glob('/src/albums/**/*.webp', { eager: true, import: 'default' });
+const webpThumbnails: Record<string, string> = import.meta.glob('/src/albums/**/*.{webp,jpg}', { eager: true, import: 'default' });
 
 // Helper function to safely get the processed URL from the glob result
 function getProcessedThumbnailUrl(absolutePathFromRoot: string): string {
@@ -386,7 +386,7 @@ export const albums = [
 // Highlights data for the PhotoHighlights component
 export const highlights = [
     {
-        url: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObtTuQHB6rEUHqbjVpkDQeuWBXo4gaP2w7KisZO",
+        url: getProcessedThumbnailUrl('/src/albums/modeling/M5.jpg'),
         size: "large"
     },
     {
