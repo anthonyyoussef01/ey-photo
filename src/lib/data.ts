@@ -383,6 +383,26 @@ export const albums = [
   },
 ];
 
+// Highlights data for the PhotoHighlights component
+export const highlights = [
+    {
+        url: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObtTuQHB6rEUHqbjVpkDQeuWBXo4gaP2w7KisZO",
+        size: "large"
+    },
+    {
+        url: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObtk3P9ocdWb5xtNJBmZvef0dM9laQDqUuoh37H",
+        size: "small"
+    },
+    {
+        url: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObtNm7l7pgx4Wd91icMRehJaKugQpSUtAymIHGf",
+        size: "small"
+    },
+    {
+        url: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObtRFFP906pe1OjBu86Gb4JKVs7RIUQ32gkcrn5",
+        size: "medium"
+    }
+];
+
 // Keep the services export as it was
 export const services = [
   {
