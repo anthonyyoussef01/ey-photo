@@ -2,11 +2,14 @@
 // --- Vite Asset Handling ---
 // Use import.meta.glob to find all .webp and .jpg files within src/albums
 // eager: true loads them immediately. import: 'default' gets the URL string.
-const webpThumbnails: Record<string, string> = import.meta.glob('/src/albums/**/*.{webp,jpg}', { eager: true, import: 'default' });
+const processedThumbnails: Record<string, string> = import.meta.glob(
+    '/src/albums/**/*.{webp,jpg,jpeg,JPG,JPEG}',
+    { eager: true, import: 'default' }
+);
 
 // Helper function to safely get the processed URL from the glob result
 function getProcessedThumbnailUrl(absolutePathFromRoot: string): string {
-  const processedUrl = webpThumbnails[absolutePathFromRoot];
+  const processedUrl = processedThumbnails[absolutePathFromRoot];
   if (!processedUrl) {
     console.warn(`[data.ts] Thumbnail not found or processed for path: ${absolutePathFromRoot}. Check file exists & glob pattern.`);
     // Return a default placeholder or handle the error appropriately

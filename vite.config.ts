@@ -9,7 +9,8 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
-  optimizeDeps: {
-    exclude: ['lucide-react'],
-  },
+  assetsInclude: ['**/*.{png,jpg,jpeg,gif,svg,webp,JPG,JPEG,WEBP}'],
+  // optimizeDeps: {
+  //   exclude: ['lucide-react'],
+  // },
 });
