@@ -389,19 +389,19 @@ export const albums = [
 // Highlights data for the PhotoHighlights component
 export const highlights = [
     {
-        url: getProcessedThumbnailUrl('/src/albums/modeling/M5.jpg'),
+        url: getProcessedThumbnailUrl('/src/albums/modeling/M5.webp'),
         size: "large"
     },
     {
-        url: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObtk3P9ocdWb5xtNJBmZvef0dM9laQDqUuoh37H",
+        url: getProcessedThumbnailUrl('/src/albums/travel/T3.webp'),
         size: "small"
     },
     {
-        url: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObtNm7l7pgx4Wd91icMRehJaKugQpSUtAymIHGf",
+      url: getProcessedThumbnailUrl('/src/albums/travel/T2.webp'),
         size: "small"
     },
     {
-        url: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObtRFFP906pe1OjBu86Gb4JKVs7RIUQ32gkcrn5",
+      url: getProcessedThumbnailUrl('/src/albums/graduations/G3.webp'),
         size: "medium"
     }
 ];
