@@ -390,7 +390,7 @@ export const albums = [
 export const highlights = [
     {
         url: getProcessedThumbnailUrl('/src/albums/modeling/M5.webp'),
-        size: "large"
+          size: "large"
     },
     {
         url: getProcessedThumbnailUrl('/src/albums/travel/T3.webp'),
@@ -403,6 +403,10 @@ export const highlights = [
     {
       url: getProcessedThumbnailUrl('/src/albums/graduations/G3.webp'),
         size: "medium"
+    },
+    {
+      url: getProcessedThumbnailUrl('/src/albums/modeling/M12.webp'),
+      size: "medium"
     }
 ];
 

@@ -12,7 +12,7 @@ export function PhotoHighlights() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 aspect-[2/1]"
+                    className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6"
                 >
                     {highlights.map((photo, index) => (
                         <motion.div
@@ -27,20 +27,42 @@ export function PhotoHighlights() {
                             }}
                             className={cn(
                                 "relative overflow-hidden rounded-2xl shadow-xl",
-                                photo.size === 'large' && 'col-span-2 row-span-2',
+                                photo.size === 'large' && 'col-span-2 row-span-3',
                                 photo.size === 'medium' && 'col-span-2',
                                 "transition-transform duration-500 hover:scale-[1.02] cursor-pointer"
                             )}
                         >
-                            <AspectRatio ratio={1}>
-                                <img
-                                    src={photo.url}
-                                    alt="Highlight photo"
-                                    className="absolute inset-0 w-full h-full object-cover"
-                                    loading="lazy"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-                            </AspectRatio>
+                            {photo.size === 'large' ? (
+                                <div className="h-full w-full">
+                                    <img
+                                        src={photo.url}
+                                        alt="Highlight photo"
+                                        className="w-full h-full object-cover"
+                                        loading="lazy"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                                </div>
+                            ) : photo.size === 'medium' ? (
+                                <AspectRatio ratio={16/9}>
+                                    <img
+                                        src={photo.url}
+                                        alt="Highlight photo"
+                                        className="absolute inset-0 w-full h-full object-cover"
+                                        loading="lazy"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                                </AspectRatio>
+                            ) : (
+                                <AspectRatio ratio={1}>
+                                    <img
+                                        src={photo.url}
+                                        alt="Highlight photo"
+                                        className="absolute inset-0 w-full h-full object-cover"
+                                        loading="lazy"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                                </AspectRatio>
+                            )}
                         </motion.div>
                     ))}
                 </motion.div>
