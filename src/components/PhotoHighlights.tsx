@@ -29,7 +29,7 @@ export function PhotoHighlights() {
                                 "relative overflow-hidden rounded-2xl shadow-xl",
                                 photo.size === 'large' && 'col-span-2 row-span-3',
                                 photo.size === 'medium' && 'col-span-2',
-                                "transition-transform duration-500 hover:scale-[1.02] cursor-pointer"
+                                "transition-transform duration-500 hover:scale-[1.02]"
                             )}
                         >
                             {photo.size === 'large' ? (
