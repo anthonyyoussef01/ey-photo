@@ -51,11 +51,13 @@ export const albums = [
       },
       {
         url: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObtRFFP906pe1OjBu86Gb4JKVs7RIUQ32gkcrn5",
-        thumbnailUrl: getProcessedThumbnailUrl('/src/albums/events/E6.webp')
+        thumbnailUrl: getProcessedThumbnailUrl('/src/albums/events/E6.webp'),
+        objectPosition: "left"
       },
       {
         url: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObtmdUi1qhdlQ0AhjSDy7xoWbGJavsFw29Ou4TE",
-        thumbnailUrl: getProcessedThumbnailUrl('/src/albums/events/E7.webp')
+        thumbnailUrl: getProcessedThumbnailUrl('/src/albums/events/E7.webp'),
+        objectPosition: "top" // Added object-position to show the top of the image
       },
       {
         url: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObtHqTIkk0rQEXVUmc8h7jCqnks1FHYwePRoliz",
@@ -63,7 +65,8 @@ export const albums = [
       },
       {
         url: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObtFbZoE2lCtAguTsGL8fpmNYUJjowqi76H2zWZ",
-        thumbnailUrl: getProcessedThumbnailUrl('/src/albums/events/E9.webp')
+        thumbnailUrl: getProcessedThumbnailUrl('/src/albums/events/E9.webp'),
+        objectPosition: "top" // Added object-position to show the top of the image
       },
       {
         url: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObt1a89ULQC81R39YBeupvMSjAhOyLbl6fosZGP",
@@ -142,7 +145,8 @@ export const albums = [
       },
       {
         url: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObta1t05yVqnFQWoPp9r2HjYwvhEtTemOJgAV5B",
-        thumbnailUrl: getProcessedThumbnailUrl("/src/albums/portraits/P12.webp")
+        thumbnailUrl: getProcessedThumbnailUrl("/src/albums/portraits/P12.webp"),
+        objectPosition: "top" // Added object-position to show the top of the image
       },
       {
         url: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObtLIwV2dTbY25qZVQTtmn6pDPcCdx793orNzEl",
@@ -154,7 +158,8 @@ export const albums = [
       },
       {
         url: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObtyrCQiQLryqupfEZLBMiOVAQcs36YT2dWtGwa",
-        thumbnailUrl: getProcessedThumbnailUrl("/src/albums/portraits/P15.webp")
+        thumbnailUrl: getProcessedThumbnailUrl("/src/albums/portraits/P15.webp"),
+        objectPosition: "top" // Added object-position to show the top of the image
       },
     ]
   },
@@ -181,7 +186,8 @@ export const albums = [
       },
       {
         url: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObtwfEYr3b2bfpYtHZUTPq9AcinKWoNSxQvRlsk",
-        thumbnailUrl: getProcessedThumbnailUrl("/src/albums/engagements/EN5.webp")
+        thumbnailUrl: getProcessedThumbnailUrl("/src/albums/engagements/EN5.webp"),
+        objectPosition: "top"
       },
       {
         url: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObt8YIe0goJ72F3x8vQARUNGMo46iOYez9plwbV",
@@ -221,6 +227,18 @@ export const albums = [
       {
         url: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObtHxvYyy0rQEXVUmc8h7jCqnks1FHYwePRoliz",
         thumbnailUrl: getProcessedThumbnailUrl("/src/albums/graduations/G6.webp")
+      },
+      {
+        url: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObtyEKJDJLryqupfEZLBMiOVAQcs36YT2dWtGwa",
+        thumbnailUrl: getProcessedThumbnailUrl("/src/albums/graduations/G7.webp")
+      },
+      {
+        url: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObtG9f9kqnwkdBCSxcX1oOpJ3QZH9ag6RrihW4D",
+        thumbnailUrl: getProcessedThumbnailUrl("/src/albums/graduations/G8.webp")
+      },
+      {
+        url: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObtyrWc5abLryqupfEZLBMiOVAQcs36YT2dWtGw",
+        thumbnailUrl: getProcessedThumbnailUrl("/src/albums/graduations/G9.webp")
       },
     ]
   },
@@ -318,7 +336,8 @@ export const albums = [
       },
       {
         url: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObtg4ugp9ym4LZd8PHEXocRfehzpwrJ3ATuySGj",
-        thumbnailUrl: getProcessedThumbnailUrl("/src/albums/cafes/C10.webp")
+        thumbnailUrl: getProcessedThumbnailUrl("/src/albums/cafes/C10.webp"),
+        objectPosition: "left"
       },
       {
         url: "https://vb44myhm6t.ufs.sh/f/I9fYjfqZTObtnNZ1y9Ov2M4fJ7NFirqWk9bPlTnsZEpH1eOQ",

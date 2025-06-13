@@ -12,6 +12,7 @@ interface Photo {
     thumbnailUrl: string; // Processed low-res WebP URL (from Vite import)
     width?: number;
     height?: number;
+    objectPosition?: string; // Added property to control thumbnail positioning
 }
 
 interface PhotoAlbumProps {
@@ -78,6 +79,7 @@ export function PhotoAlbum({albumId, title, photos, className, preview = false}:
                                         src={photo.thumbnailUrl} // Use the THUMBNAIL URL (now processed by Vite)
                                         alt={`${title} ${index + 1}`}
                                         loading="lazy" // Add native lazy loading
+                                        style={{ objectPosition: photo.objectPosition || 'center' }} // Use objectPosition or default to center
                                         className={cn(
                                             "absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105",
                                             !loadedThumbnails.has(photo.thumbnailUrl) && "opacity-0" // Hide until THUMBNAIL loaded

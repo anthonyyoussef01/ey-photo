@@ -11,6 +11,7 @@ interface Photo {
     thumbnailUrl: string; // Processed low-res WebP URL (from Vite import)
     width?: number;
     height?: number;
+    objectPosition?: string; // Added property to control thumbnail positioning
 }
 
 interface PhotoGridProps {
@@ -62,6 +63,7 @@ export function PhotoGrid({ photos }: PhotoGridProps) {
                                     src={photo.thumbnailUrl} // Use the THUMBNAIL URL (now processed by Vite)
                                     alt={`Photo ${index + 1}`}
                                     loading="lazy" // Add native lazy loading
+                                    style={{ objectPosition: photo.objectPosition || 'center' }} // Use objectPosition or default to center
                                     className={cn(
                                         "object-cover w-full h-full transition-transform duration-300 group-hover:scale-105",
                                         !loadedThumbnails.has(photo.thumbnailUrl) && "opacity-0" // Hide until THUMBNAIL loaded
