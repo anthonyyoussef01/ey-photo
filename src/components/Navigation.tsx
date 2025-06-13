@@ -23,6 +23,8 @@ export function Navigation({ className }: NavigationProps) {
   const location = useLocation();
   const { theme, setTheme } = useTheme();
 
+  const getNavHeight = () => document.querySelector('nav')?.clientHeight || 0;
+
   const scrollToTop = () => {
     handleScrollLinkClick('hero');
   };
@@ -32,6 +34,7 @@ export function Navigation({ className }: NavigationProps) {
       scroller.scrollTo(scrollTo, {
         smooth: true,
         duration: 500,
+        offset: -getNavHeight(),
       });
       setScrollTo(null);
     }
@@ -45,6 +48,7 @@ export function Navigation({ className }: NavigationProps) {
       scroller.scrollTo(path, {
         smooth: true,
         duration: 500,
+        offset: -getNavHeight(),
       });
     }
   };

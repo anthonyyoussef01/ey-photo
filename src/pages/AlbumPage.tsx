@@ -5,9 +5,13 @@ import { PhotoGrid } from '@/components/PhotoGrid';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 
 export function AlbumPage() {
   const { albumId } = useParams();
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+  }, []);
   const album = albums.find(a => a?.id === albumId);
 
   if (!album) {
